@@ -1,22 +1,27 @@
-import { required, email, maxLength15, minLength3 } from '../validations/index';
+import { required, email, maxLength15, minLength3, minCounterZero, categoryMaxLength15} from '../validations/index';
 import { Icon } from 'antd';
 import React from 'react';
 
 export const registerFields = [
     {
-        name: "name",
-        fields: [{
-            label: "First Name",
-            name: "firstName",
-            validate: [required, maxLength15, minLength3],
-            prefix: <Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />
-        },
-        {
-            label: "Last Name",
-            name: "lastName",
-            validate: [required, maxLength15, minLength3],
-            prefix: <Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />
-        }]
+        label: "First Name",
+        name: "firstName",
+        validate: [required, maxLength15, minLength3],
+        prefix: <Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />
+    },
+    {
+        label: "Last Name",
+        name: "lastName",
+        validate: [required, maxLength15, minLength3],
+        prefix: <Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />
+    },
+    {
+        label: "count",
+        name:"count",
+        field:"Count",
+        validate:[minCounterZero],
+        prefix: <Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />
+
     },
     {
 

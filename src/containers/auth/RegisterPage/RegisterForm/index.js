@@ -10,9 +10,9 @@ let RegisterForm = (props) => {
     return (
         <Form onSubmit={handleSubmit(props.signup)}>
             {
-                registerFields.map((field, key)=> {
+                registerFields.map((field, key)=> (
                     <Field component={renderFields} key={key} {...{...field}}/>
-                })
+                ))
             }
             <Button type="primary" htmlType="submit" className="login-form-button" loading={submitting}>Sumbit</Button>
         </Form>

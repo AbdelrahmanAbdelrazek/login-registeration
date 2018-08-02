@@ -3,9 +3,9 @@ import { Input } from 'antd';
 
 export class text extends Component {
     render() {
-        const { label, placeholder, input, ...restOfProps } = this.props;
+        const { label, placeholder, input } = this.props;
         return(
-            <Input {...input} {...{ ...restOfProps }} placeholder={placeholder||label}/>
+            <Input {...input} {...this.props } placeholder={placeholder||label}/>
         );
 
     }

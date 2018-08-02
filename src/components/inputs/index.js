@@ -25,6 +25,7 @@ class renderFields extends Component {
           };
         const { FieldComponent } = this;
         const { label, meta: { touched, error } } = this.props;
+        console.log(touched)
         return (
             <Form.Item
                 label={label}

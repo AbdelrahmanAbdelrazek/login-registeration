@@ -14,3 +14,12 @@ export const minLength = min => value =>
 
 export const minLength3 = minLength(3)
 
+export const minCounterValue = min => value =>
+  value && (value.number < min) ? `Can't be less than ${min}`: null;
+
+
+export const minCounterZero = minCounterValue(0);
+export const categoryMaxLength =  max => value =>
+  value.category && value.category.length > max ? `Must be ${max} characters or less` : undefined
+
+export const categoryMaxLength15 = categoryMaxLength(15);
